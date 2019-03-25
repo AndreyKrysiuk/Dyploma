@@ -27,6 +27,8 @@ namespace Project1 {
 
 	private: 
 		System::Windows::Forms::TabControl^  tabControl1;
+	private: System::Windows::Forms::ToolStripMenuItem^  ñîõðàíèòüÂñåÔàéëûToolStripMenuItem;
+
 
 	protected:	
 		String^ FilePath = gcnew String(FilePathByDefault.c_str());
@@ -73,6 +75,7 @@ namespace Project1 {
 			this->îòêðûòüToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ñîõðàíèòüToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ñîõðàíèòüÊàêToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->ñîõðàíèòüÂñåÔàéëûToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripSeparator());
 			this->âûõîäToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ïðàâêàToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -98,11 +101,11 @@ namespace Project1 {
 			// 
 			// fileToolStripMenuItem
 			// 
-			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(6)
+			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(7)
 			{
 				this->ñîçäàòüToolStripMenuItem,
-					this->îòêðûòüToolStripMenuItem, this->ñîõðàíèòüToolStripMenuItem, this->ñîõðàíèòüÊàêToolStripMenuItem, this->toolStripMenuItem1,
-					this->âûõîäToolStripMenuItem
+					this->îòêðûòüToolStripMenuItem, this->ñîõðàíèòüToolStripMenuItem, this->ñîõðàíèòüÊàêToolStripMenuItem, this->ñîõðàíèòüÂñåÔàéëûToolStripMenuItem,
+					this->toolStripMenuItem1, this->âûõîäToolStripMenuItem
 			});
 			this->fileToolStripMenuItem->Name = L"fileToolStripMenuItem";
 			this->fileToolStripMenuItem->Size = System::Drawing::Size(48, 20);
@@ -112,7 +115,7 @@ namespace Project1 {
 			// 
 			this->ñîçäàòüToolStripMenuItem->Name = L"ñîçäàòüToolStripMenuItem";
 			this->ñîçäàòüToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Control | System::Windows::Forms::Keys::N));
-			this->ñîçäàòüToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->ñîçäàòüToolStripMenuItem->Size = System::Drawing::Size(275, 22);
 			this->ñîçäàòüToolStripMenuItem->Text = L"Ñîçäàòü";
 			this->ñîçäàòüToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::ñîçäàòüToolStripMenuItem_Click);
 			// 
@@ -120,7 +123,7 @@ namespace Project1 {
 			// 
 			this->îòêðûòüToolStripMenuItem->Name = L"îòêðûòüToolStripMenuItem";
 			this->îòêðûòüToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Control | System::Windows::Forms::Keys::O));
-			this->îòêðûòüToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->îòêðûòüToolStripMenuItem->Size = System::Drawing::Size(275, 22);
 			this->îòêðûòüToolStripMenuItem->Text = L"Îòêðûòü";
 			this->îòêðûòüToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::îòêðûòüToolStripMenuItem_Click);
 			// 
@@ -128,26 +131,35 @@ namespace Project1 {
 			// 
 			this->ñîõðàíèòüToolStripMenuItem->Name = L"ñîõðàíèòüToolStripMenuItem";
 			this->ñîõðàíèòüToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>((System::Windows::Forms::Keys::Control | System::Windows::Forms::Keys::S));
-			this->ñîõðàíèòüToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->ñîõðàíèòüToolStripMenuItem->Size = System::Drawing::Size(275, 22);
 			this->ñîõðàíèòüToolStripMenuItem->Text = L"Ñîõðàíèòü";
 			this->ñîõðàíèòüToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::ñîõðàíèòüToolStripMenuItem_Click);
 			// 
 			// ñîõðàíèòüÊàêToolStripMenuItem
 			// 
 			this->ñîõðàíèòüÊàêToolStripMenuItem->Name = L"ñîõðàíèòüÊàêToolStripMenuItem";
-			this->ñîõðàíèòüÊàêToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->ñîõðàíèòüÊàêToolStripMenuItem->Size = System::Drawing::Size(275, 22);
 			this->ñîõðàíèòüÊàêToolStripMenuItem->Text = L"Ñîõðàíèòü êàê...";
 			this->ñîõðàíèòüÊàêToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::ñîõðàíèòüÊàêToolStripMenuItem_Click);
+			// 
+			// ñîõðàíèòüÂñåÔàéëûToolStripMenuItem
+			// 
+			this->ñîõðàíèòüÂñåÔàéëûToolStripMenuItem->Name = L"ñîõðàíèòüÂñåÔàéëûToolStripMenuItem";
+			this->ñîõðàíèòüÂñåÔàéëûToolStripMenuItem->ShortcutKeys = static_cast<System::Windows::Forms::Keys>(((System::Windows::Forms::Keys::Control | System::Windows::Forms::Keys::Shift)
+				| System::Windows::Forms::Keys::S));
+			this->ñîõðàíèòüÂñåÔàéëûToolStripMenuItem->Size = System::Drawing::Size(275, 22);
+			this->ñîõðàíèòüÂñåÔàéëûToolStripMenuItem->Text = L"Ñîõðàíèòü âñå ôàéëû...";
+			this->ñîõðàíèòüÂñåÔàéëûToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainForm::ñîõðàíèòüÂñåÔàéëûToolStripMenuItem_Click);
 			// 
 			// toolStripMenuItem1
 			// 
 			this->toolStripMenuItem1->Name = L"toolStripMenuItem1";
-			this->toolStripMenuItem1->Size = System::Drawing::Size(177, 6);
+			this->toolStripMenuItem1->Size = System::Drawing::Size(272, 6);
 			// 
 			// âûõîäToolStripMenuItem
 			// 
 			this->âûõîäToolStripMenuItem->Name = L"âûõîäToolStripMenuItem";
-			this->âûõîäToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->âûõîäToolStripMenuItem->Size = System::Drawing::Size(275, 22);
 			this->âûõîäToolStripMenuItem->Text = L"Âûõîä";
 			// 
 			// ïðàâêàToolStripMenuItem
@@ -164,8 +176,10 @@ namespace Project1 {
 			// 
 			// tabControl1
 			// 
+			this->tabControl1->AllowDrop = true;
 			this->tabControl1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->tabControl1->Location = System::Drawing::Point(0, 24);
+			this->tabControl1->Multiline = true;
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
 			this->tabControl1->Size = System::Drawing::Size(384, 237);
@@ -238,6 +252,15 @@ private: System::Void ñîõðàíèòüÊàêToolStripMenuItem_Click(System::Object^  sende
 	{
 		SelectedTab->SetFilePath(saveFileDialog1->FileName);
 		SelectedTab->SaveFile();
+	}
+}
+private: System::Void ñîõðàíèòüÂñåÔàéëûToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e)
+{
+	Collections::IEnumerator ^ Enumerator = tabControl1->TabPages->GetEnumerator();
+	while(Enumerator->MoveNext())
+	{
+		TextTabPage^ TextPage = static_cast<TextTabPage^>((Enumerator->Current));
+		TextPage->SaveFile();
 	}
 }
 };

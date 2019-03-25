@@ -18,18 +18,12 @@
     <ClCompile Include="MainForm.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="FileForm1.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="TextTabPage.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainForm.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="FileForm1.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="TextTabPage.h">
