@@ -16,7 +16,7 @@ TextTabPage::TextTabPage(String^ FilePath)
 	this->Controls->Add(TextBox);
 	this->Text = CutFilePathToFileName(FilePath);
 	this->FilePath = FilePath;
-
+	
 }
 
 void TextTabPage::SaveFile()
@@ -34,6 +34,14 @@ String ^ TextTabPage::CutFilePathToFileName(String ^ FilePath)
 	String^ FileName = FilePath;
 	int index = FileName->LastIndexOf("\\");
 	FileName = FileName->Substring(index + 1);
+	return FileName;
+}
+
+String ^ TextTabPage::GetFileNameWithoutFormat(String ^ FilePath)
+{
+	String^ FileName = FilePath;
+	int index = FileName->LastIndexOf(".");
+	FileName = FileName->Substring(0, index);
 	return FileName;
 }
 

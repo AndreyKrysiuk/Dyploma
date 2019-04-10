@@ -1,5 +1,6 @@
 #pragma once
-
+#include "resource.h"
+#include <Windows.h>
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -21,10 +22,17 @@ public:
 	void SetFilePath(String^ NewFilePath);
 
 	static String^ CutFilePathToFileName(String^ FilePath);
+	static String^ GetFileNameWithoutFormat(String^ FileName);
 
 private:	
 	RichTextBox^ TextBox;
 	String^ FilePath;
 	
+	Point* imageLocation = new Point(13, 5);
+	Point* imageHitArea = new Point(13, 2);
+	Image^ closeImage;
+	
+
+
 };
 
